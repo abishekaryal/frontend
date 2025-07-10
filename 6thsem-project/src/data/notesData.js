@@ -9,6 +9,8 @@ const notesData = [
     uploadDate: '2023-01-15',
     fileUrl: '#',
     folder: 'React Notes',
+    rating: 4.5,
+    comments: [],
   },
   {
     id: '2',
@@ -20,6 +22,8 @@ const notesData = [
     uploadDate: '2023-02-20',
     fileUrl: '#',
     folder: 'JavaScript Notes',
+    rating: 4.8,
+    comments: [],
   },
   {
     id: '3',
@@ -31,6 +35,8 @@ const notesData = [
     uploadDate: '2023-03-10',
     fileUrl: '#',
     folder: 'CSS Notes',
+    rating: 4.2,
+    comments: [],
   },
   {
     id: '4',
@@ -42,6 +48,8 @@ const notesData = [
     uploadDate: '2023-04-01',
     fileUrl: '#',
     folder: 'React Notes',
+    rating: 4.6,
+    comments: [],
   },
   {
     id: '5',
@@ -53,6 +61,8 @@ const notesData = [
     uploadDate: '2023-05-05',
     fileUrl: '#',
     folder: 'JavaScript Notes',
+    rating: 4.9,
+    comments: [],
   },
 ];
 

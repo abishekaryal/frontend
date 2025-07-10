@@ -2,14 +2,14 @@
     max-width: 600px;
     margin: 50px auto;
     padding: 30px;
-    background-color: #fff;
+    background-color: var(--color-background);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .request-edit-access-container h2 {
-    color: #333;
+    color: var(--color-secondary);
     margin-bottom: 25px;
     font-size: 2em;
 }
@@ -22,7 +22,7 @@
 .request-edit-form label {
     display: block;
     margin-bottom: 8px;
-    color: #555;
+    color: var(--color-text-dark);
     font-weight: bold;
 }
 
@@ -30,7 +30,7 @@
 .request-edit-form textarea {
     width: calc(100% - 20px);
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-primary);
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
@@ -43,14 +43,14 @@
 
 .request-edit-form input[type="text"]:focus,
 .request-edit-form textarea:focus {
-    border-color: #007bff;
+    border-color: var(--color-accent);
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+    box-shadow: 0 0 5px rgba(216, 151, 60, 0.25);
 }
 
 .submit-button {
-    background-color: #007bff;
-    color: white;
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -60,12 +60,12 @@
 }
 
 .submit-button:hover {
-    background-color: #0056b3;
+    background-color: #c27e2e;
 }
 
 .success-message {
     margin-top: 20px;
-    color: #28a745;
+    color: var(--color-secondary);
     font-weight: bold;
     font-size: 1.1em;
 }

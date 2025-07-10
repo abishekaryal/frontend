@@ -26,12 +26,7 @@ const Home = ({ notes }) => {
     }
   };
 
-  // Mock data for featured notes (can be filtered from `notes` prop later if needed)
-  const featuredNotes = [
-    { id: '1', title: 'Introduction to React Hooks', subject: 'React', tags: 'hooks, frontend, example' },
-    { id: '2', title: 'Advanced JavaScript Concepts', subject: 'JavaScript', tags: 'js, programming, advanced' },
-    { id: '3', title: 'CSS Flexbox and Grid', subject: 'CSS', tags: 'css, layout, design' },
-  ];
+  const featuredNotes = notes.slice(0, 3);
 
   return (
     <div className="home-container">
@@ -77,6 +72,7 @@ const Home = ({ notes }) => {
               title={note.title}
               subject={note.subject}
               tags={note.tags}
+              rating={note.rating}
             />
           ))}
           {searchQuery && filteredNotes.length === 0 && <p>No notes found matching your search.</p>}

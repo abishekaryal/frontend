@@ -6,20 +6,20 @@
 
 /* Hero Section */
 .hero-section {
-  background-color: #f0f8ff; /* Light blue background */
+  background-color: var(--color-primary); /* Light blue background */
   padding: 2rem 1rem;
   text-align: center;
 }
 
 .hero-content h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--color-secondary);
   margin-bottom: 0.8rem;
 }
 
 .hero-content p {
   font-size: 1rem;
-  color: #666;
+  color: var(--color-text-dark);
   margin-bottom: 1.5rem;
 }
 
@@ -27,12 +27,12 @@
 .how-it-works-section {
   padding: 2rem 1rem;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--color-background);
 }
 
 .how-it-works-section h2 {
   font-size: 2rem;
-  color: #333;
+  color: var(--color-secondary);
   margin-bottom: 2rem;
 }
 
@@ -51,8 +51,8 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #6e8efb;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
   font-size: 1.2rem;
   line-height: 40px;
   margin: 0 auto 0.8rem;
@@ -60,26 +60,26 @@
 
 .step h3 {
   font-size: 1.2rem;
-  color: #333;
+  color: var(--color-secondary);
   margin-bottom: 0.4rem;
 }
 
 .step p {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--color-text-dark);
 }
 
 /* Featured Notes Section */
 .featured-notes-section {
   padding: 2rem 1rem;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: var(--color-background);
 }
 
 .featured-notes-section h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--color-secondary);
 }
 
 .notes-grid {
@@ -94,12 +94,12 @@
 .testimonials-section {
   padding: 1.5rem 1rem;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--color-background);
 }
 
 .testimonials-section h2 {
   font-size: 1.8rem;
-  color: #333;
+  color: var(--color-secondary);
   margin-bottom: 1rem;
 }
 
@@ -111,20 +111,20 @@
 .testimonial p {
   font-size: 0.9rem;
   font-style: italic;
-  color: #666;
+  color: var(--color-text-dark);
   margin-bottom: 0.4rem;
 }
 
 .testimonial span {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #333;
+  color: var(--color-secondary);
 }
 
 /* Call to Action Section */
 .cta-section {
-  background: linear-gradient(135deg, #a777e3, #6e8efb);
-  color: white;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: var(--color-text-light);
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -140,8 +140,8 @@
 }
 
 .cta-button {
-  background-color: white;
-  color: #6e8efb;
+  background-color: var(--color-text-light);
+  color: var(--color-secondary);
   border: none;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
@@ -153,8 +153,8 @@
 }
 
 .cta-button:hover {
-  background-color: #f0f0f0;
-  color: #5a78e6;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 /* Responsive Design */

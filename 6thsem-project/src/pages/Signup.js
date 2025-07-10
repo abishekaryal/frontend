@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import "./SignupForm.css";
 
 const Signup = () => {
@@ -10,6 +10,8 @@ const Signup = () => {
     confirmPassword: "",
   });
 
+  const navigate = useNavigate(); // Initialize navigate
+
   const { name, email, password, confirmPassword } = formData;
 
   const onChange = (e) =>
@@ -18,10 +20,12 @@ const Signup = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      console.log("Passwords do not match");
+      alert("Passwords do not match"); // Alert for password mismatch
     } else {
       // Implement signup logic here
       console.log("Signup submitted", formData);
+      alert("Signup successful! Please log in."); // Alert for successful signup
+      navigate("/login"); // Redirect to login page
     }
   };
 

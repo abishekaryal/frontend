@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
 
+:root {
+  --color-primary: #d8c99c;
+  --color-secondary: #273e47;
+  --color-accent: #d8973c;
+  --color-text-light: #f8f8f8;
+  --color-text-dark: #333333;
+  --color-background: #f4f4f4;
+}
+
 body {
   margin: 0;
   font-family:
@@ -7,6 +16,8 @@ body {
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
 }
 
 code {

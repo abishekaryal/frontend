@@ -7,11 +7,11 @@
 .admin-dashboard-container h1 {
   text-align: center;
   margin-bottom: 2rem;
-  color: #333;
+  color: var(--color-secondary);
 }
 
 .admin-section {
-  background-color: #f8f9fa;
+  background-color: var(--color-background);
   padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,7 @@
 .admin-section h2 {
   margin-top: 0;
   margin-bottom: 1.5rem;
-  color: #555;
+  color: var(--color-secondary);
 }
 
 .admin-table {
@@ -32,19 +32,19 @@
 
 .admin-table th,
 .admin-table td {
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--color-primary);
   padding: 0.75rem;
   text-align: left;
 }
 
 .admin-table th {
-  background-color: #e9ecef;
+  background-color: var(--color-primary);
   font-weight: bold;
-  color: #495057;
+  color: var(--color-secondary);
 }
 
 .admin-table tbody tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #fcfcfc; /* A very light shade for alternating rows */
 }
 
 .admin-table button {
@@ -57,17 +57,17 @@
 }
 
 .admin-table .edit-btn {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
 }
 
 .admin-table .edit-btn:hover {
-  background-color: #0056b3;
+  background-color: #c27e2e;
 }
 
 .admin-table .delete-btn {
   background-color: #dc3545;
-  color: white;
+  color: var(--color-text-light);
 }
 
 .admin-table .delete-btn:hover {
@@ -75,28 +75,29 @@
 }
 
 .admin-table .approve-btn {
-  background-color: #28a745;
-  color: white;
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
 }
 
 .admin-table .approve-btn:hover {
-  background-color: #218838;
+  background-color: #1a2b33;
 }
 
 .admin-table .reject-btn {
-  background-color: #ffc107;
-  color: #212529;
+  background-color: var(--color-primary);
+  color: var(--color-text-dark);
 }
 
 .admin-table .reject-btn:hover {
-  background-color: #e0a800;
+  background-color: #b8a87e;
 }
 
 .admin-table .manage-btn {
   background-color: #17a2b8;
-  color: white;
+  color: var(--color-text-light);
 }
 
-.admin-table .manage-btn:hover {
-  background-color: #138496;
+.admin-table tbody tr:hover {
+  background-color: var(--color-primary); /* Use primary color for hover */
+  opacity: 0.8; /* Slightly transparent for hover effect */
 }
