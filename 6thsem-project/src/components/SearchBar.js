@@ -1,13 +1,17 @@
+import React, { useState } from "react";
+import "./SearchBar.css";
 
-import React, { useState } from 'react';
-import './SearchBar.css';
-
-const SearchBar = () => {
-  const [query, setQuery] = useState('');
+const SearchBar = ({ onSearch }) => {
+  const [query, setQuery] = useState("");
 
   const handleSearch = () => {
-    // In a real app, you'd trigger a search here
-    console.log('Searching for:', query);
+    onSearch(query);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      onSearch(query);
+    }
   };
 
   return (
@@ -17,6 +21,7 @@ const SearchBar = () => {
         placeholder="Search for notes, subjects, or tags"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
+        onKeyPress={handleKeyPress}
       />
       <button onClick={handleSearch}>Search</button>
     </div>

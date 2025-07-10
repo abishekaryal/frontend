@@ -1,4 +1,3 @@
-
 .single-note-container {
   padding: 2rem;
   max-width: 800px;
@@ -29,47 +28,83 @@
   color: #555;
 }
 
-.note-actions {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.view-button,
+.download-link,
 .share-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-size: 1rem;
   cursor: pointer;
   text-align: center;
-  border: none;
 }
 
-.view-button {
+.download-link {
   background-color: #007bff;
   color: white;
+  margin-right: 1rem;
 }
 
-.view-button:hover {
+.download-link:hover {
   background-color: #0056b3;
 }
 
 .share-button {
   background-color: #28a745;
   color: white;
+  border: none;
 }
 
 .share-button:hover {
   background-color: #218838;
 }
 
-.edit-button {
-  background-color: #ffc107;
-  color: #212529;
+.request-edit-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  background-color: #6c757d;
+  color: white;
+  border: none;
 }
 
-.edit-button:hover {
-  background-color: #e0a800;
+.request-edit-button:hover {
+  background-color: #5a6268;
+}
+
+.related-notes {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.related-notes h3 {
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.related-notes ul {
+  list-style: none;
+  padding: 0;
+}
+
+.related-notes li {
+  margin-bottom: 0.5rem;
+}
+
+.related-notes li a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.related-notes li a:hover {
+  text-decoration: underline;
 }

@@ -1,0 +1,74 @@
+.dashboard-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.my-notes-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.my-notes-section h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.notes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.notes-table th,
+.notes-table td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.notes-table th {
+  background-color: #e9ecef;
+  font-weight: bold;
+  color: #495057;
+}
+
+.notes-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.notes-table button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+}
+
+.notes-table .edit-btn {
+  background-color: #007bff;
+  color: white;
+}
+
+.notes-table .edit-btn:hover {
+  background-color: #0056b3;
+}
+
+.notes-table .delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.notes-table .delete-btn:hover {
+  background-color: #c82333;
+}

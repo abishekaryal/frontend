@@ -1,21 +1,42 @@
-import React, { useState } from 'react';
-import './ContributorDashboard.css';
+import React, { useState } from "react";
+import "./ContributorDashboard.css";
 
 const ContributorDashboard = () => {
   // Dummy data for notes
   const [myNotes, setMyNotes] = useState([
-    { id: 1, title: 'React Hooks Cheatsheet', subject: 'React', tags: 'hooks, frontend', status: 'published', folder: 'React Notes' },
-    { id: 2, title: 'Node.js Best Practices', subject: 'Backend', tags: 'nodejs, express', status: 'pending review', folder: 'Backend Dev' },
-    { id: 3, title: 'CSS Flexbox Guide', subject: 'CSS', tags: 'css, layout', status: 'draft', folder: 'Frontend Basics' },
+    {
+      id: 1,
+      title: "React Hooks Cheatsheet",
+      subject: "React",
+      tags: "hooks, frontend",
+      status: "published",
+      folder: "React Notes",
+    },
+    {
+      id: 2,
+      title: "Node.js Best Practices",
+      subject: "Backend",
+      tags: "nodejs, express",
+      status: "pending review",
+      folder: "Backend Dev",
+    },
+    {
+      id: 3,
+      title: "CSS Flexbox Guide",
+      subject: "CSS",
+      tags: "css, layout",
+      status: "draft",
+      folder: "Frontend Basics",
+    },
   ]);
 
   // Dummy data for folders
   const [folders, setFolders] = useState([
-    { id: 1, name: 'React Notes' },
-    { id: 2, name: 'Backend Dev' },
-    { id: 3, name: 'Frontend Basics' },
+    { id: 1, name: "React Notes" },
+    { id: 2, name: "Backend Dev" },
+    { id: 3, name: "Frontend Basics" },
   ]);
-  const [newFolderName, setNewFolderName] = useState('');
+  const [newFolderName, setNewFolderName] = useState("");
 
   const handleEdit = (noteId) => {
     console.log(`Edit note with ID: ${noteId}`);
@@ -25,26 +46,26 @@ const ContributorDashboard = () => {
   const handleDelete = (noteId) => {
     console.log(`Delete note with ID: ${noteId}`);
     // In a real application, this would trigger a delete API call
-    if (window.confirm('Are you sure you want to delete this note?')) {
+    if (window.confirm("Are you sure you want to delete this note?")) {
       alert(`Note ${noteId} deleted (frontend simulation)`);
-      setMyNotes(myNotes.filter(note => note.id !== noteId));
+      setMyNotes(myNotes.filter((note) => note.id !== noteId));
     }
   };
 
   const handleAddFolder = () => {
-    if (newFolderName.trim() !== '') {
+    if (newFolderName.trim() !== "") {
       const newFolder = {
         id: folders.length + 1,
         name: newFolderName.trim(),
       };
       setFolders([...folders, newFolder]);
-      setNewFolderName('');
+      setNewFolderName("");
     }
   };
 
   // Group notes by folder
   const notesByFolder = myNotes.reduce((acc, note) => {
-    const folderName = note.folder || 'Uncategorized'; // Default to 'Uncategorized' if no folder
+    const folderName = note.folder || "Uncategorized"; // Default to 'Uncategorized' if no folder
     if (!acc[folderName]) {
       acc[folderName] = [];
     }
@@ -83,7 +104,7 @@ const ContributorDashboard = () => {
         {Object.keys(notesByFolder).length === 0 ? (
           <p>You haven't uploaded any notes yet.</p>
         ) : (
-          Object.keys(notesByFolder).map(folderName => (
+          Object.keys(notesByFolder).map((folderName) => (
             <div key={folderName} className="notes-in-folder">
               <h3>Folder: {folderName}</h3>
               <table className="notes-table">
@@ -104,8 +125,18 @@ const ContributorDashboard = () => {
                       <td>{note.tags}</td>
                       <td>{note.status}</td>
                       <td>
-                        <button onClick={() => handleEdit(note.id)} className="edit-btn">Edit</button>
-                        <button onClick={() => handleDelete(note.id)} className="delete-btn">Delete</button>
+                        <button
+                          onClick={() => handleEdit(note.id)}
+                          className="edit-btn"
+                        >
+                          Edit
+                        </button>
+                        <button
+                          onClick={() => handleDelete(note.id)}
+                          className="delete-btn"
+                        >
+                          Delete
+                        </button>
                       </td>
                     </tr>
                   ))}

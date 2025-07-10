@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SearchBar from '../components/SearchBar';
 import NoteCard from '../components/NoteCard';
 import './Home.css';
 
-const Home = () => {
-  // Mock data for featured notes
+const Home = ({ notes }) => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredNotes, setFilteredNotes] = useState(notes);
+
+  useEffect(() => {
+    setFilteredNotes(notes);
+  }, [notes]);
+
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+    if (query.trim() === '') {
+      setFilteredNotes(notes);
+    } else {
+      const lowercasedQuery = query.toLowerCase();
+      const results = notes.filter(note =>
+        note.title.toLowerCase().includes(lowercasedQuery) ||
+        note.subject.toLowerCase().includes(lowercasedQuery) ||
+        note.tags.toLowerCase().includes(lowercasedQuery)
+      );
+      setFilteredNotes(results);
+    }
+  };
+
+  // Mock data for featured notes (can be filtered from `notes` prop later if needed)
   const featuredNotes = [
-    { id: 1, title: 'Introduction to React', subject: 'Web Development', tags: ['React', 'JavaScript'] },
-    { id: 2, title: 'Data Structures in Python', subject: 'Computer Science', tags: ['Python', 'Data Structures'] },
-    { id: 3, title: 'Machine Learning Basics', subject: 'Artificial Intelligence', tags: ['ML', 'AI'] },
+    { id: '1', title: 'Introduction to React Hooks', subject: 'React', tags: 'hooks, frontend, example' },
+    { id: '2', title: 'Advanced JavaScript Concepts', subject: 'JavaScript', tags: 'js, programming, advanced' },
+    { id: '3', title: 'CSS Flexbox and Grid', subject: 'CSS', tags: 'css, layout, design' },
   ];
 
   return (
@@ -18,7 +40,7 @@ const Home = () => {
         <div className="hero-content">
           <h1>Get Better Grades, Together</h1>
           <p>Find the best study resources, shared by your fellow students.</p>
-          <SearchBar />
+          <SearchBar onSearch={handleSearch} />
         </div>
       </section>
 
@@ -34,7 +56,7 @@ const Home = () => {
           <div className="step">
             <div className="step-icon">2</div>
             <h3>Learn</h3>
-            <p>View and study with high-quality, peer-reviewed notes online.</p>
+            <p>Download and study with high-quality, peer-reviewed notes.</p>
           </div>
           <div className="step">
             <div className="step-icon">3</div>
@@ -44,34 +66,24 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Notes Section */}
+      {/* Display filtered notes if a search query exists, otherwise display featured notes */}
       <section className="featured-notes-section">
-        <h2>Top Rated Notes</h2>
+        <h2>{searchQuery ? 'Search Results' : 'Top Rated Notes'}</h2>
         <div className="notes-grid">
-          {featuredNotes.map((note) => (
+          {(searchQuery ? filteredNotes : featuredNotes).map((note) => (
             <NoteCard
               key={note.id}
               id={note.id}
               title={note.title}
               subject={note.subject}
-              tags={note.tags.join(', ')}
+              tags={note.tags}
             />
           ))}
+          {searchQuery && filteredNotes.length === 0 && <p>No notes found matching your search.</p>}
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="testimonials-section">
-        <h2>What Our Users Say</h2>
-        <div className="testimonial">
-          <p>"NoteShare has been a lifesaver for my exams. The notes are so helpful!"</p>
-          <span>- Sarah, University of Toronto</span>
-        </div>
-        <div className="testimonial">
-          <p>"I love being able to share my notes and help other students. Plus, I get to see what others are studying."</p>
-          <span>- John, University of California</span>
-        </div>
-      </section>
+      
 
       {/* Call to Action Section */}
       <section className="cta-section">

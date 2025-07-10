@@ -1,7 +1,7 @@
 /* src/pages/Home.css */
 
 .home-container {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Hero Section */
@@ -147,7 +147,9 @@
   font-size: 1rem;
   border-radius: 50px;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
 
 .cta-button:hover {
