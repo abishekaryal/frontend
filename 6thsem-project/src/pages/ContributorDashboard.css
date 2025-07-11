@@ -94,8 +94,74 @@
   color: var(--color-text-light);
 }
 
+
 .notes-table .delete-btn:hover {
   background-color: #c82333; /* Darker red for delete */
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(220, 53, 69, 0.2);
+}
+
+/* Folder Management Section */
+.folder-management-section {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 2rem;
+}
+
+.folder-management-section h2 {
+  margin: 0 0 1.5rem;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.add-folder-form {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-folder-form input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-text-dark);
+}
+
+.add-folder-form button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--color-accent);
+  color: var(--color-text-light);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.add-folder-form button:hover {
+  background-color: #c27e2e; /* Darker accent */
+}
+
+.folder-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.folder-list li {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }

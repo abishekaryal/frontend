@@ -1,7 +1,16 @@
-feat: Implement rating and comment system, refine UI/UX
+feat(css): Professional Styling and Optimization
 
-This commit introduces:
-- A 1-to-5 star rating system for notes, displayed on NoteCard and SingleNote components.
-- A comment section for notes, visible only to contributors.
-- Refined UI/UX across the application, including updated color themes and optimized CSS for a modern aesthetic.
-- Simplified and cleaned up Login and Signup pages for a more conventional look.
+This commit introduces a comprehensive visual overhaul of the user interface by optimizing and standardizing the CSS across multiple components and pages.
+
+Key changes include:
+- Consistent Sizing and Spacing: Reduced padding, margins, and font sizes to create a more compact, professional, and visually balanced layout.
+- Improved Visual Hierarchy: Enhanced the styling of sections, cards, and forms to guide the user's attention and improve readability.
+- Modernized Aesthetics: Updated color usage, shadows, and hover effects for a more polished and contemporary look.
+
+These changes affect the following areas:
+- Homepage (all sections)
+- Note Cards
+- Admin Dashboard
+- Signup and Login Forms
+- Contributor Dashboard
+- Notes List and Upload Form
