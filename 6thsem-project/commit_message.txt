@@ -1,0 +1,7 @@
+feat: Implement rating and comment system, refine UI/UX
+
+This commit introduces:
+- A 1-to-5 star rating system for notes, displayed on NoteCard and SingleNote components.
+- A comment section for notes, visible only to contributors.
+- Refined UI/UX across the application, including updated color themes and optimized CSS for a modern aesthetic.
+- Simplified and cleaned up Login and Signup pages for a more conventional look.

@@ -5,95 +5,95 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f0f2f5; /* Light grey background */
+  background-color: #f8f8f8; /* Very light grey background */
   padding: 1rem;
 }
 
 .login-form-wrapper {
-  max-width: 360px; /* Smaller max-width */
+  max-width: 380px; /* Slightly wider */
   width: 100%;
-  padding: 2.5rem; /* Reduced padding */
-  background-color: #ffffff; /* White background */
-  border-radius: 8px; /* Standard border-radius */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Standard shadow */
+  padding: 2.5rem; 
+  background-color: #ffffff; 
+  border-radius: 12px; /* Softer corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer, more spread out shadow */
   text-align: center;
-  color: #333333; /* Dark text */
+  color: #333333; 
 }
 
 .login-form-wrapper h2 {
   margin-bottom: 0.8rem;
-  font-size: 2rem; /* Standard font size */
-  color: #333333;
+  font-size: 2rem; 
+  color: #273e47;
 }
 
 .login-form-wrapper p {
   margin-bottom: 1.5rem;
-  font-size: 0.9rem; /* Smaller font size */
+  font-size: 0.95rem; /* Slightly larger font size */
   color: #666666;
 }
 
 .form-group {
-  margin-bottom: 1rem; /* Reduced margin */
+  margin-bottom: 1.2rem; /* Slightly increased margin */
   text-align: left;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.4rem; /* Reduced margin */
-  font-weight: 500;
-  color: #555555;
+  margin-bottom: 0.5rem; /* Slightly increased margin */
+  font-weight: 600; /* Bolder label */
+  color: #273e47;
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.7rem 0.8rem; /* Reduced padding */
-  border: 1px solid #cccccc; /* Standard grey border */
-  border-radius: 5px;
+  padding: 0.8rem 1rem; /* Increased padding */
+  border: 1px solid #e0e0e0; /* Lighter grey border */
+  border-radius: 8px;
   background-color: #ffffff;
   color: #333333;
-  font-size: 0.95rem;
+  font-size: 1rem;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-group input::placeholder {
-  color: #999999;
+  color: #aaaaaa;
 }
 
 .form-group input:focus {
   outline: none;
-  border-color: #007bff; /* Standard blue on focus */
-  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+  border-color: #d8973c; /* Orange on focus */
+  box-shadow: 0 0 0 3px rgba(216, 151, 60, 0.25);
 }
 
 .submit-btn {
   width: 100%;
-  padding: 0.8rem; /* Reduced padding */
+  padding: 0.9rem;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff; /* Standard blue button */
-  color: #ffffff;
-  font-size: 1rem;
+  border-radius: 8px;
+  background-color: #273e47; 
+  color: #d8c99b;
+  font-size: 1.05rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
 }
 
 .submit-btn:hover {
-  background-color: #0056b3; /* Darker blue on hover */
-  transform: translateY(-1px);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #3a5a6b; /* Lighter shade of #273e47 on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .additional-text {
-  margin-top: 1.2rem; /* Reduced margin */
-  font-size: 0.85rem;
+  margin-top: 1.5rem; 
+  font-size: 0.9rem;
   color: #666666;
 }
 
 .additional-text a {
-  color: #007bff; /* Standard blue for links */
+  color: #d8973c; /* Orange for links */
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: color 0.2s ease;
 }
 

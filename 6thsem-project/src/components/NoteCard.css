@@ -1,13 +1,16 @@
 .note-card {
   background-color: var(--color-background);
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
+  border-radius: 16px; /* Slightly more rounded corners */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Softer, more spread out shadow */
+  padding: 1rem;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
   cursor: pointer;
   border: 1px solid var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .note-card:hover {
@@ -16,15 +19,15 @@
 }
 
 .note-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
   color: var(--color-secondary);
 }
 
 .note-card p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--color-text-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .note-card-link {
@@ -35,12 +38,12 @@
 .note-card-rating {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--color-accent);
-  margin-top: 1rem;
+  margin-top: 0.8rem;
 }
 
 .note-card-rating .star {
-  margin-left: 0.25rem;
-  font-size: 1.2rem;
+  margin-left: 0.2rem;
+  font-size: 1rem;
 }
